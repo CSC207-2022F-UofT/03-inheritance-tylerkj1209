@@ -41,10 +41,9 @@ class BagMain {
     public static int countCrossbodyStraps(Bag[] bags) {
         // TODO: Implement this.
         Integer accumulator = 0;
-        for (int i = 0; i < bags.length; i++) {
-            if (bags[i] instanceof CrossbodyBag) {
-                CrossbodyBag bag = (CrossbodyBag) bags[i];
-                accumulator += bag.getNumberOfStraps();
+        for (Bag value : bags) {
+            if (value instanceof CrossbodyBag) {
+                accumulator += ((CrossbodyBag) value).getNumberOfStraps();
 
             }
         }
